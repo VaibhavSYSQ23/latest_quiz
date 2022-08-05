@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ending-result</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap');
+        </style>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+            </style>
+   <style>
+        body{
+            margin-top: 200px;
+            text-align: center;
+            background-color: rgb(228, 113, 60);
+            text-shadow: 2px 2px 2px rgb(97, 91, 91);
+            font-family: 'Kalam', cursive;
+            margin-bottom: 100px;
+        }
+        h1{
+            background-color: rgb(209, 248, 170);
+            border-radius: 6px;
+            margin: 120px;
+        }
+        #Demo{
+            background-color: rgb(197, 155, 240);
+            margin: auto;
+            border-radius: 5px;
+            margin-left: 60px;
+            margin-right:60px;
+            font-size: 20px;
+            font-family: 'Homemade Apple', cursive;
+        }
+        #Score{
+            background-color: rgb(108, 140, 236);
+            margin-left: 130px;
+            margin-right:130px ;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1><p>Game result</p></h1>
+        <div>
+            <p id="Demo"></p>
+        </div>
+        <div><h2>Your Score</h2>
+            <p id="Score"></p>
+        </div>
+    </div>
+    <script>
+        for (let i = 1;i <= 4; i++) {
+            document.getElementById("Demo").innerHTML += localStorage.getItem('value'+i) + "<br>" ;
+        }
+        document.getElementById("Score").innerHTML = ('You have Scored 100/100');
+    </script>
+</body>
+</html>
