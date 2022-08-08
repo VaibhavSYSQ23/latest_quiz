@@ -10,6 +10,16 @@ activeQuestion = 0;
 
 function onClicked(i) {
     console.log(document.getElementById("option"+i).innerHTML === data[activeQuestion].correctAns); 
+
+    var storing = document.getElementById("option"+i).innerHTML;
+    console.log(storing);
+
+    localStorage.setItem("Answer"+activeQuestion,storing);
+
+    var checkerEnd = document.getElementById("option"+i).innerHTML === data[activeQuestion].correctAns;
+
+    localStorage.setItem("Checker"+activeQuestion,checkerEnd);
+
     
     if (activeQuestion === (data.length - 1)) {
         setTimeout(function () {
